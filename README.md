@@ -1,4 +1,4 @@
-# newsapi
+# dart_newsapi
 
 A Dart package for newsapi.org. An API Key from newsapi.org is required to use this package. Get one for free at newsapi.org
 
