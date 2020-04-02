@@ -1,6 +1,6 @@
 name: dart_newsapi
 description: A Dart package for newsapi.org. An API Key from newsapi.org is required to use this package. Get one for free at newsapi.org Using only http package, nothing more nothing less.
-version: 0.1.1
+version: 0.1.1+1
 author: Kristian Hareland <kristian@hareland.eu>
 homepage: https://github.com/hareland/dart-newsapi.git
 

@@ -20,7 +20,7 @@ class Source {
   factory Source.fromMap(Map source) {
     return Source(
       source['name'],
-      source['id'] ?? null,
+      source.containsKey('id') ? source['id'] : null,
       description:
           source.containsKey('description') ? source['description'] : null,
       url: source.containsKey('url') ? source['url'] : null,

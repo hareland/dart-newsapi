@@ -13,3 +13,7 @@
 ## [0.1.1] - 03.04.2020
 
 * Update code to adhere to suggestions from analysis from pub.dev
+
+## [0.1.1+1] - 03.04.2020
+
+* Update code to adhere to suggestions from analysis from pub.dev

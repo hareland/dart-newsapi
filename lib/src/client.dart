@@ -84,7 +84,7 @@ class NewsAPI {
     Map<String, dynamic> out = {};
 
     options.forEach((String k, value) {
-      if (_allowedQueryParameters.contains(k) != -1) {
+      if (_allowedQueryParameters.contains(k)) {
         out[k] = value;
       }
     });
@@ -123,7 +123,7 @@ class NewsAPI {
     if (!decoded.containsKey('status') ||
         !decoded.containsKey('totalResults') ||
         !decoded.containsKey('articles')) {
-      throw new Exception(
+      throw Exception(
           "NewsAPI: Missing either: status, totalResults or articles from response body.");
     }
 
