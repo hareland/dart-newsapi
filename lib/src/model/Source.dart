@@ -21,11 +21,12 @@ class Source {
     return Source(
       source['name'],
       source['id'] ?? null,
-      description: source['description'] ?? null,
-      url: source['url'] ?? null,
-      category: source['category'] ?? null,
-      country: source['country'] ?? null,
-      language: source['language'] ?? null,
+      description:
+          source.containsKey('description') ? source['description'] : null,
+      url: source.containsKey('url') ? source['url'] : null,
+      category: source.containsKey('category') ? source['category'] : null,
+      country: source.containsKey('country') ? source['country'] : null,
+      language: source.containsKey('language') ? source['language'] : null,
     );
   }
 }

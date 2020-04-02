@@ -30,7 +30,7 @@ class NewsAPI {
   ///NewsAPI Constructor.
   NewsAPI(this._apiKey) {
     if (_apiKey.isEmpty) {
-      throw new Exception("NewsAPI: Missing required API Key.");
+      throw Exception("NewsAPI: Missing required API Key.");
     }
   }
 
@@ -84,7 +84,7 @@ class NewsAPI {
     Map<String, dynamic> out = {};
 
     options.forEach((String k, value) {
-      if (_allowedQueryParameters.indexOf(k) != -1) {
+      if (_allowedQueryParameters.contains(k) != -1) {
         out[k] = value;
       }
     });
@@ -113,7 +113,7 @@ class NewsAPI {
 
   List<Article> _transformResponseToArticleList(Response response) {
     if (response.statusCode != 200) {
-      throw new Exception(
+      throw Exception(
           "NewsAPI: Response from $_host did not return HTTP 200 OK.");
     }
 
@@ -135,14 +135,14 @@ class NewsAPI {
 
   List<Source> _transformResponseToSourceList(Response response) {
     if (response.statusCode != 200) {
-      throw new Exception(
+      throw Exception(
           "NewsAPI: Response from $_host did not return HTTP 200 OK.");
     }
 
     Map decoded = json.decode(response.body);
 
     if (!decoded.containsKey('status') || !decoded.containsKey('sources')) {
-      throw new Exception(
+      throw Exception(
           "NewsAPI: Missing either: status or sources from response body.");
     }
 
